@@ -1,0 +1,12 @@
+
+Types of PHP Error ::
+1. Parse or Syntax Errors (missing ; } ) ) , incorrect symbols in your script    [ -- TERMINATE SCRIPT -- ]
+2. Fatal Errors (undefined class, function, constant)    [ -- TERMINATE SCRIPT -- ]
+3. Warning Errors   [ -- DO NOT TERMINATE SCRIPT -- ]
+    a. not a critical one—but it might become a serious issue in the future
+    b. (undefined variable, missing params to functions )
+4. Notice Errors  [ -- DO NOT TERMINATE SCRIPT -- ]
+
+
+Types of Error Levels in PHP ::
+// https://www.php.net/manual/en/errorfunc.constants.php

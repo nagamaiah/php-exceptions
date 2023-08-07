@@ -1,12 +1,47 @@
 
+A PHP Error occurs when something is wrong in the PHP code. Like missing vars, funcs, class and syntax errors etc.,
+
 Types of PHP Error ::
 1. Parse or Syntax Errors (missing ; } ) ) , incorrect symbols in your script    [ -- TERMINATE SCRIPT -- ]
 2. Fatal Errors (undefined class, function, constant)    [ -- TERMINATE SCRIPT -- ]
 3. Warning Errors   [ -- DO NOT TERMINATE SCRIPT -- ]
     a. not a critical one—but it might become a serious issue in the future
-    b. (undefined variable, missing params to functions )
-4. Notice Errors  [ -- DO NOT TERMINATE SCRIPT -- ]
+    b. (wrong params or missing params to functions )
+    c. Calling on an external file that does not exist in the directory
+4. Notice Errors (undefined variable)  [ -- DO NOT TERMINATE SCRIPT -- ]
+    a. Occurs if the script needs access to an undefined variable.
 
 
 Types of Error Levels in PHP ::
 // https://www.php.net/manual/en/errorfunc.constants.php
+
+
+
+Throwable is the base interface for any object that can be thrown via a throw statement, including Error and Exception.
+PHP classes cannot implement the Throwable interface directly, and must instead extend Exception.
+
+
+try {
+// Code that may throw an Exception or Error.
+} catch (Throwable $th) {
+    get_class($th) 
+    $th::class
+}
+
+try {
+   // Code that may throw an Exception or ArithmeticError.
+} catch (ArithmeticError | Exception $e) {
+   // pass
+}
+
+
+
+// php built-in errors Types
+ArithmeticError
+DivisionByZeroError
+AssertionError
+CompileError
+ParseError
+TypeError
+ArgumentCountError
+ValueError

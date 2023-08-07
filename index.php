@@ -1,5 +1,9 @@
 <?php
 
+ini_set('display_errors', true);
+ini_set('display_startup_errors', true);
+error_reporting(E_ALL);
+
 require 'vendor/autoload.php';
 
 use App\Controllers\VotesController;
@@ -34,8 +38,10 @@ try {
 //     // this will generate notice that would not be caught
 //     // echo $someNotSetVariable;
 //     // fatal error that now actually is caught
-//     someNoneExistentFunction();
-//  } catch (\Error $e) {
+//     // someNoneExistentFunction();
+//     // $a = 10/0;
+//     // throw new \Exception('dummy exception');
+//  } catch (\Throwable $e) {
 //     // echo $e::class;
 //        echo $e->getMessage();
 //  }

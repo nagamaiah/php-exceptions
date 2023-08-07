@@ -1,0 +1,18 @@
+
+Error and Exception classes will both implements php's built-in base interface Throwable;
+
+
+### PHP built-in exceptions
+BadFunctionCallException
+BadMethodCallException
+DomainException
+InvalidArgumentException
+LengthException
+LogicException
+OutOfBoundsException
+OutOfRangeException
+OverflowException
+RangeException
+RuntimeException
+UnderflowException
+UnexpectedValueException
